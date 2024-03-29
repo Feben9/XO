@@ -15,3 +15,11 @@ h1 {
 .square {
   padding: 20px;
 }
+
+.btnStyle {
+  padding: 10px;
+  background-color: black;
+  color: white;
+  border: solid 1px white;
+  margin: 10px;
+}

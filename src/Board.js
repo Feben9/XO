@@ -1,6 +1,7 @@
 // Board.js
 import React, { useState } from 'react';
 import Square from './Square';
+import Restart from './Restart';
 import './App.css';
 
 const Board = () => {
@@ -23,8 +24,11 @@ const Board = () => {
 
   const winner = calculateWinner(squares);
   let status;
+  let gStatus = false;
+
   if (winner) {
-    status = 'Winner: ' + winner;
+    status = 'THE WINNER IS: ' + winner + '!!!';
+    gStatus = true;
   } else {
     status = 'Next player: ' + (xIsNext ? 'X' : 'O');
   }
@@ -49,6 +53,7 @@ const Board = () => {
             {renderSquare(8)}
         </div>
       </div>
+      <Restart gameStatus={gStatus} />
     </div>
   );
 };
