@@ -6,6 +6,12 @@ h1 {
   font-size: 76px;
   line-height: 1.8;
 }
+.status {
+  padding: 20px;
+  font-weight: bold;
+  line-height: 50px;
+  font-size: 34px;  
+}
 
 .grid-style {
   display: flex;
@@ -13,7 +19,27 @@ h1 {
 }
 
 .square {
-  padding: 20px;
+  /*padding: 50px;*/
+
+  background: #fff;
+  border: 2px solid #000;
+  
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 50px;
+  height: 50px;
+  margin: -2px;
+  padding: 0;
+  text-align: center;
+  width: 50px;
+}
+
+.board-row::before {
+  margin: 10px;
+}
+.board-row::after {
+  margin: 10px;
+  line-height: 45px;
 }
 
 .btnStyle {
