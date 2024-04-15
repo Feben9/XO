@@ -36,23 +36,35 @@ const Board = () => {
   return (
     <div>
       <div className="status">{status}</div>
-      <div className="grid-style">
-        <div className="board-row">
+      <div class="grid">
+        <div class="grid-item">
             {renderSquare(0)}
+        </div>
+        <div class="grid-item">
             {renderSquare(1)}
+        </div>
+        <div class="grid-item">
             {renderSquare(2)}
         </div>
-        <div className="board-row">
+        <div class="grid-item">
             {renderSquare(3)}
+        </div>
+        <div class="grid-item">
             {renderSquare(4)}
+        </div>
+        <div class="grid-item">
             {renderSquare(5)}
         </div>
-        <div className="board-row">
+        <div class="grid-item">
             {renderSquare(6)}
+        </div>
+        <div class="grid-item">
             {renderSquare(7)}
+        </div>
+        <div class="grid-item">
             {renderSquare(8)}
         </div>
-      </div>
+        </div>
       <Restart gameStatus={gStatus} />
     </div>
   );

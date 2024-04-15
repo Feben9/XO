@@ -13,17 +13,7 @@ h1 {
   font-size: 34px;  
 }
 
-.grid-style {
-  display: flex;
-  flex-direction: column;
-}
-
-.square {
-  /*padding: 50px;*/
-
-  background: #fff;
-  border: 2px solid #000;
-  
+.square {  
   font-size: 24px;
   font-weight: bold;
   line-height: 50px;
@@ -32,14 +22,7 @@ h1 {
   padding: 0;
   text-align: center;
   width: 50px;
-}
-
-.board-row::before {
-  margin: 10px;
-}
-.board-row::after {
-  margin: 10px;
-  line-height: 45px;
+  border: none;
 }
 
 .btnStyle {
@@ -48,4 +31,40 @@ h1 {
   color: white;
   border: solid 1px white;
   margin: 10px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  overflow: hidden;
+  width: 150px;
+  margin: 10px auto;
+  border: 1px solid black;
+}
+
+.grid-item {
+  position: relative;
+  border-style: none;
+}
+
+.grid-item::before,
+.grid-item::after {
+  content: '';
+  position: absolute;
+  background-color: #333;
+  z-index: 1;
+}
+
+.grid-item::after {
+  width: 100vw;
+  height: 1px;
+  left: 0;
+  top: -1px;
+}
+
+.grid-item::before {
+  width: 1px;
+  height: 100vh;
+  left: -1px;
+  top: 0;
 }

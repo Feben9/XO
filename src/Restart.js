@@ -9,7 +9,7 @@ export default function Restart(props) {
 
     return (
         <div>
-            {gameOver && <button className='btnStyle' onClick={clickBtn}> Restart </button>}
+            {gameOver && <button className='btnStyle' onClick={clickBtn}> Rematch! </button>}
         </div>
     );
 };
